@@ -1,0 +1,44 @@
+body {
+  padding-left: 10rem;
+  background-image: url(háttér.jpg);
+  background-size: 100%;
+}
+
+.kérdésszöveg {
+  font-size: 20px;
+}
+
+.btn {
+  height: 120px;
+  width: 240px;
+  font-size: 30px;
+  background-color: rgba(42, 97, 168, 0.9);
+}
+
+.hidden {
+  display: none;
+}
+
+#btn-következő {
+  color: whitesmoke;
+  height: 40px;
+  width: 120px;
+  font-size: 20px;
+  background-color: rgba(23, 44, 8, 0.9);
+}
+
+#btn-kezdés {
+  color: whitesmoke;
+  height: 40px;
+  width: 240px;
+  font-size: 20px;
+  background-color: rgba(23, 44, 8, 0.9);
+}
+
+#btn-újra {
+  color: whitesmoke;
+  height: 40px;
+  width: 120px;
+  font-size: 20px;
+  background-color: rgba(23, 44, 8, 0.9);
+}
