@@ -36,12 +36,17 @@ console.log(kérdések);
 let válaszokgyűjtő = [
   [1526, 1980, 1765, 1112],
   [1000, 1230, 967, 860],
-  ["Szabolcs", "Borsod", "Békés", "Heves"],
+  ["Szabolcs-Szatmár-Bereg", "Borsod-Abaúj-Zemplén", "Békés", "Heves"],
   [19, 14, 17, 22],
   ["Duna", "Tisza", "Maros", "Dráva"],
   ["Tisza", "Duna", "Száva", "Moson"],
-  ["Petőfi", "Arany", "Kosztolányi", "Ady"],
-  ["Kispest", "Fradi", "Újpest", "Nyíregyháza"],
+  ["Petőfi Sándor", "Arany János", "Kosztolányi Dezső", "Ady Endre"],
+  [
+    "Kispest Honvéd",
+    "Ferencvárosi TC",
+    "Újpesti Dózsa",
+    "Nyíregyháza Spartacus",
+  ],
   [
     "II. Szilveszter pápa",
     "X. Benedek pápa",
@@ -298,12 +303,17 @@ document.querySelector("#btn-újra").addEventListener("click", function () {
   válaszokgyűjtő = [
     [1526, 1980, 1765, 1112],
     [1000, 1230, 967, 860],
-    ["Szabolcs", "Borsod", "Békés", "Heves"],
+    ["Szabolcs-Szatmár-Bereg", "Borsod-Abaúj-Zemplén", "Békés", "Heves"],
     [19, 14, 17, 22],
     ["Duna", "Tisza", "Maros", "Dráva"],
     ["Tisza", "Duna", "Száva", "Moson"],
-    ["Petőfi", "Arany", "Kosztolányi", "Ady"],
-    ["Kispest", "Fradi", "Újpest", "Nyíregyháza"],
+    ["Petőfi Sándor", "Arany János", "Kosztolányi Dezső", "Ady Endre"],
+    [
+      "Kispest Honvéd",
+      "Ferencvárosi TC",
+      "Újpesti Dózsa",
+      "Nyíregyháza Spartacus",
+    ],
     [
       "II. Szilveszter pápa",
       "X. Benedek pápa",

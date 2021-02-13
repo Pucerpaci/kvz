@@ -20,6 +20,16 @@ p {
   font-size: 20px;
 }
 
+.válaszcont {
+  padding-bottom: 7px;
+}
+
+input {
+  padding-bottom: 40px;
+  height: 16px;
+  width: 16px;
+}
+
 .btn {
   height: 120px;
   width: 240px;
