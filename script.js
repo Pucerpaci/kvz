@@ -54,7 +54,7 @@ let válaszokgyűjtő = [
     "I. Kelemen pápa",
   ],
   ["Batthyány Lajos", "Kossuth Lajos", "Deák Ferenc", "Széchenyi István"],
-  ["Hunyadi János", "Dugonics Titusz", "Anonymus", "II. Mehmed"],
+  ["Hunyadi János", "Dugovics Titusz", "Anonymus", "II. Mehmed"],
   [
     "közlekedésügyi miniszter",
     "népjóléti miniszter",
@@ -321,7 +321,7 @@ document.querySelector("#btn-újra").addEventListener("click", function () {
       "I. Kelemen pápa",
     ],
     ["Batthyány Lajos", "Kossuth Lajos", "Deák Ferenc", "Széchenyi István"],
-    ["Hunyadi János", "Dugonics Titusz", "Anonymus", "II. Mehmed"],
+    ["Hunyadi János", "Dugovics Titusz", "Anonymus", "II. Mehmed"],
     [
       "közlekedésügyi miniszter",
       "népjóléti miniszter",
