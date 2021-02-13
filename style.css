@@ -1,10 +1,22 @@
 body {
-  padding-left: 10rem;
-  background-image: url(háttér.jpg);
-  background-size: 100%;
+  padding-left: 2rem;
+  /* background-image: url(háttér.jpg); */
+  background-color: rgba(153, 153, 160, 0.9);
+}
+
+p {
+  font-size: 20px;
 }
 
 .kérdésszöveg {
+  font-size: 20px;
+}
+
+/* .válaszok {
+  background-color: cadetblue;
+} */
+
+.válaszlabelök {
   font-size: 20px;
 }
 

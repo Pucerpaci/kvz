@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Kvízkérdések.xlsx" />
     <title>Magyarország kvíz</title>
   </head>
   <body>
     <div>
       <h1>
-        Magyarország kvíz - a gyakorlás, felkészülés a család elpicsázására!
+        Magyarország kvíz
       </h1>
       <button id="btn-kezdés">Játék kezdése</button>
     </div>
@@ -18,21 +19,57 @@
     </div>
     <div class="válaszok hidden">
       <br />
-      <button class="btn válasz1">Válasz1</button>
+
+      <input id="válasz1" type="checkbox" />
+      <label class="válasz1label válaszlabelök">válasz1</label>
+      <span class="checkmark"></span>
+      <br />
+      <input id="válasz2" type="checkbox" />
+      <label class="válasz2label válaszlabelök">válasz2</label>
+      <span class="checkmark"></span>
+      <br />
+      <input id="válasz3" type="checkbox" />
+      <label class="válasz3label válaszlabelök">válasz3</label>
+      <span class="checkmark"></span>
+      <br />
+      <input id="válasz4" type="checkbox" />
+      <label class="válasz4label válaszlabelök">válasz4</label>
+      <span class="checkmark"></span>
+      <!-- <input id="válasz1" type="radio" name="válaszok" value="1" />
+      <label class="válasz1label válaszlabelök">válasz1</label>
+      <br />
+      <input id="válasz2" type="radio" name="válaszok" value="2" /><label
+        class="válasz2label válaszlabelök"
+        >válasz2</label
+      >
+      <br />
+      <input id="válasz3" type="radio" name="válaszok" value="3" /><label
+        class="válasz3label válaszlabelök"
+        >válasz3</label
+      >
+      <br />
+      <input id="válasz4" type="radio" name="válaszok" value="4" /><label
+        class="válasz4label válaszlabelök"
+        >válasz4</label
+      > -->
+      <!-- <button class="btn válasz1">Válasz1</button>
       <button class="btn válasz2">Válasz2</button>
       <br />
       <br />
       <button class="btn válasz3">Válasz3</button>
-      <button class="btn válasz4">Válasz4</button>
+      <button class="btn válasz4">Válasz4</button> -->
     </div>
     <div class="következő hidden">
-      <br />
+      <p>Jó válaszok aránya: <p class="jóválaszaránya">0/0</p> </p>
       <button id="btn-következő">Következő</button>
       <h1 class="vége hidden">Nincs több kérdés, vége a játéknak!</h1>
     </div>
     <div class="újra hidden">
       <button id="btn-újra">Újrakezdés</button>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.14.3/dist/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datasource@0.1.0"></script>
     <script src="script.js"></script>
   </body>
 </html>

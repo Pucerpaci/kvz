@@ -3,10 +3,7 @@
 let kérdés;
 let véletlenk;
 let márvolt = [];
-// let kiesikkérdés;
-// let maradkérdés;
-// let kiesikválasz;
-// let maradválasz;
+
 let válaszok;
 let helyesválasz;
 let válasz1;
@@ -14,15 +11,24 @@ let válasz2;
 let válasz3;
 let válasz4;
 
+let pontok = 0;
+let kérdésszámok = 1;
+let jóválaszarány;
+
 let kérdések = [
   "Mikor volt a mohácsi vész?",
   "Mikor koronázták meg Szent Istvánt?",
   "Melyik megye székhelye Nyíregyháza?",
   "Hány megye van Magyarországon?",
-  "Mi Magyarország legnagyobb folyója?",
+  "Melyik Magyarország legnagyobb folyója?",
   "Melyik a legmagyarabb folyó?",
   "Ki írta a János vitézt?",
   "Melyik magyar csapatban játszott Puskás Ferenc?",
+  "A legenda szerint ki ajándékozta I. Szent Istvánnak a Szent Koronát?",
+  "Ki volt az első független magyar kormány miniszterelnöke?",
+  "Kinek az emlékműve található Pécs főterén?",
+  "Milyen miniszter volt Széchenyi István az első független magyar kormányban?",
+  "A Duna teljes hossza 2850 km, mennyi ebből a magyarországi szakasz?",
 ];
 
 console.log(kérdések);
@@ -36,6 +42,21 @@ let válaszokgyűjtő = [
   ["Tisza", "Duna", "Száva", "Moson"],
   ["Petőfi", "Arany", "Kosztolányi", "Ady"],
   ["Kispest", "Fradi", "Újpest", "Nyíregyháza"],
+  [
+    "II. Szilveszter pápa",
+    "X. Benedek pápa",
+    "VI. János pápa",
+    "I. Kelemen pápa",
+  ],
+  ["Batthyány Lajos", "Kossuth Lajos", "Deák Ferenc", "Széchenyi István"],
+  ["Hunyadi János", "Dugonics Titusz", "Anonymus", "II. Mehmed"],
+  [
+    "közlekedésügyi miniszter",
+    "népjóléti miniszter",
+    "pénzügyminiszter",
+    "belügyminiszter",
+  ],
+  ["417 km", "324 km", "528 km", "483 km"],
 ];
 
 const újkérdés = function () {
@@ -100,53 +121,125 @@ document.querySelector("#btn-kezdés").addEventListener("click", function () {
   document.querySelector(".következő").classList.remove("hidden");
   document.querySelector(".kérdés").textContent = kérdés;
   document.querySelector(".kérdés").classList.add("kérdésszöveg");
-  document.querySelector(".válasz1").textContent = válasz1;
-  document.querySelector(".válasz2").textContent = válasz2;
-  document.querySelector(".válasz3").textContent = válasz3;
-  document.querySelector(".válasz4").textContent = válasz4;
+  document.querySelector(".válasz1label").textContent = válasz1;
+  document.querySelector(".válasz2label").textContent = válasz2;
+  document.querySelector(".válasz3label").textContent = válasz3;
+  document.querySelector(".válasz4label").textContent = válasz4;
 });
 
-document.querySelector(".válasz1").addEventListener("click", function () {
+document.querySelector("#válasz1").addEventListener("click", function () {
   if (válasz1 === helyesválasz) {
-    document.querySelector(".válasz1").style.backgroundColor = "green";
+    document.querySelector(".válasz1label").style.color = "green";
     console.log("helyes válasz");
+    pontok = pontok + 1;
+    document.querySelector(
+      ".jóválaszaránya"
+    ).textContent = `${pontok}/${kérdésszámok}`;
   } else {
-    document.querySelector(".válasz1").style.backgroundColor = "red";
+    document.querySelector(".válasz1label").style.color = "red";
+    document.querySelector(
+      ".jóválaszaránya"
+    ).textContent = `${pontok}/${kérdésszámok}`;
     console.log("rossz válasz");
+    if (válasz2 === helyesválasz)
+      document.querySelector(".válasz2label").style.color = "green";
+    if (válasz3 === helyesválasz)
+      document.querySelector(".válasz3label").style.color = "green";
+    if (válasz4 === helyesválasz)
+      document.querySelector(".válasz4label").style.color = "green";
   }
+  document.querySelector("#válasz2").disabled = true;
+  document.querySelector("#válasz3").disabled = true;
+  document.querySelector("#válasz4").disabled = true;
 });
 
-document.querySelector(".válasz2").addEventListener("click", function () {
+document.querySelector("#válasz2").addEventListener("click", function () {
   if (válasz2 === helyesválasz) {
-    document.querySelector(".válasz2").style.backgroundColor = "green";
+    document.querySelector(".válasz2label").style.color = "green";
     console.log("helyes válasz");
+    pontok = pontok + 1;
+    document.querySelector(
+      ".jóválaszaránya"
+    ).textContent = `${pontok}/${kérdésszámok}`;
+    jóválaszarány = (pontok / kérdésszámok) * 100;
   } else {
-    document.querySelector(".válasz2").style.backgroundColor = "red";
+    document.querySelector(".válasz2label").style.color = "red";
+    document.querySelector(
+      ".jóválaszaránya"
+    ).textContent = `${pontok}/${kérdésszámok}`;
+    jóválaszarány = (pontok / kérdésszámok) * 100;
     console.log("rossz válasz");
+    if (válasz1 === helyesválasz)
+      document.querySelector(".válasz1label").style.color = "green";
+    if (válasz3 === helyesválasz)
+      document.querySelector(".válasz3label").style.color = "green";
+    if (válasz4 === helyesválasz)
+      document.querySelector(".válasz4label").style.color = "green";
   }
+  document.querySelector("#válasz1").disabled = true;
+  document.querySelector("#válasz3").disabled = true;
+  document.querySelector("#válasz4").disabled = true;
 });
 
-document.querySelector(".válasz3").addEventListener("click", function () {
+document.querySelector("#válasz3").addEventListener("click", function () {
   if (válasz3 === helyesválasz) {
-    document.querySelector(".válasz3").style.backgroundColor = "green";
+    document.querySelector(".válasz3label").style.color = "green";
     console.log("helyes válasz");
+    pontok = pontok + 1;
+    document.querySelector(
+      ".jóválaszaránya"
+    ).textContent = `${pontok}/${kérdésszámok}`;
+    jóválaszarány = (pontok / kérdésszámok) * 100;
   } else {
-    document.querySelector(".válasz3").style.backgroundColor = "red";
+    document.querySelector(".válasz3label").style.color = "red";
+    document.querySelector(
+      ".jóválaszaránya"
+    ).textContent = `${pontok}/${kérdésszámok}`;
+    jóválaszarány = (pontok / kérdésszámok) * 100;
     console.log("rossz válasz");
+    if (válasz1 === helyesválasz)
+      document.querySelector(".válasz1label").style.color = "green";
+    if (válasz2 === helyesválasz)
+      document.querySelector(".válasz2label").style.color = "green";
+    if (válasz4 === helyesválasz)
+      document.querySelector(".válasz4label").style.color = "green";
   }
+  document.querySelector("#válasz1").disabled = true;
+  document.querySelector("#válasz2").disabled = true;
+  document.querySelector("#válasz4").disabled = true;
 });
 
-document.querySelector(".válasz4").addEventListener("click", function () {
+document.querySelector("#válasz4").addEventListener("click", function () {
   if (válasz4 === helyesválasz) {
-    document.querySelector(".válasz4").style.backgroundColor = "green";
+    document.querySelector(".válasz4label").style.color = "green";
     console.log("helyes válasz");
+    pontok = pontok + 1;
+    document.querySelector(
+      ".jóválaszaránya"
+    ).textContent = `${pontok}/${kérdésszámok}`;
+    jóválaszarány = (pontok / kérdésszámok) * 100;
   } else {
-    document.querySelector(".válasz4").style.backgroundColor = "red";
+    document.querySelector(".válasz4label").style.color = "red";
+    document.querySelector(
+      ".jóválaszaránya"
+    ).textContent = `${pontok}/${kérdésszámok}`;
+    jóválaszarány = (pontok / kérdésszámok) * 100;
     console.log("rossz válasz");
+    if (válasz1 === helyesválasz)
+      document.querySelector(".válasz1label").style.color = "green";
+    if (válasz2 === helyesválasz)
+      document.querySelector(".válasz2label").style.color = "green";
+    if (válasz3 === helyesválasz)
+      document.querySelector(".válasz3label").style.color = "green";
   }
+  document.querySelector("#válasz1").disabled = true;
+  document.querySelector("#válasz2").disabled = true;
+  document.querySelector("#válasz3").disabled = true;
 });
 
 document.querySelector("#btn-következő").addEventListener("click", function () {
+  kérdésszámok = kérdésszámok + 1;
+
   if (kérdések.length > 0) {
     újkérdés();
   } else {
@@ -154,22 +247,34 @@ document.querySelector("#btn-következő").addEventListener("click", function ()
     document.querySelector(".vége").classList.remove("hidden");
     document.querySelector(".újra").classList.remove("hidden");
   }
-  document.querySelector(".válasz1").style.backgroundColor =
-    "rgba(42, 97, 168, 0.9)";
-  document.querySelector(".válasz2").style.backgroundColor =
-    "rgba(42, 97, 168, 0.9)";
-  document.querySelector(".válasz3").style.backgroundColor =
-    "rgba(42, 97, 168, 0.9)";
-  document.querySelector(".válasz4").style.backgroundColor =
-    "rgba(42, 97, 168, 0.9)";
+
   document.querySelector(".kérdés").textContent = kérdés;
-  document.querySelector(".válasz1").textContent = válasz1;
-  document.querySelector(".válasz2").textContent = válasz2;
-  document.querySelector(".válasz3").textContent = válasz3;
-  document.querySelector(".válasz4").textContent = válasz4;
+  document.querySelector(".válasz1label").textContent = válasz1;
+  document.querySelector(".válasz2label").textContent = válasz2;
+  document.querySelector(".válasz3label").textContent = válasz3;
+  document.querySelector(".válasz4label").textContent = válasz4;
+  document.querySelector(".válasz1label").style.color = "black";
+  document.querySelector(".válasz2label").style.color = "black";
+  document.querySelector(".válasz3label").style.color = "black";
+  document.querySelector(".válasz4label").style.color = "black";
+  document.querySelector("#válasz1").checked = false;
+  document.querySelector("#válasz2").checked = false;
+  document.querySelector("#válasz3").checked = false;
+  document.querySelector("#válasz4").checked = false;
+  document.querySelector("#válasz1").disabled = false;
+  document.querySelector("#válasz2").disabled = false;
+  document.querySelector("#válasz3").disabled = false;
+  document.querySelector("#válasz4").disabled = false;
 });
 
 document.querySelector("#btn-újra").addEventListener("click", function () {
+  kérdésszámok = 1;
+  pontok = 0;
+
+  document.querySelector(
+    ".jóválaszaránya"
+  ).textContent = `${pontok}/${kérdésszámok}`;
+
   document.querySelector("#btn-következő").classList.remove("hidden");
   document.querySelector(".vége").classList.add("hidden");
   document.querySelector(".újra").classList.add("hidden");
@@ -179,10 +284,15 @@ document.querySelector("#btn-újra").addEventListener("click", function () {
     "Mikor koronázták meg Szent Istvánt?",
     "Melyik megye székhelye Nyíregyháza?",
     "Hány megye van Magyarországon?",
-    "Mi Magyarország legnagyobb folyója?",
+    "Melyik Magyarország legnagyobb folyója?",
     "Melyik a legmagyarabb folyó?",
     "Ki írta a János vitézt?",
     "Melyik magyar csapatban játszott Puskás Ferenc?",
+    "A legenda szerint ki ajándékozta I. Szent Istvánnak a Szent Koronát?",
+    "Ki volt az első független magyar kormány miniszterelnöke?",
+    "Kinek az emlékműve található Pécs főterén?",
+    "Milyen miniszter volt Széchenyi István az első független magyar kormányban?",
+    "A Duna teljes hossza 2850 km, mennyi ebből a magyarországi szakasz?",
   ];
 
   válaszokgyűjtő = [
@@ -194,6 +304,21 @@ document.querySelector("#btn-újra").addEventListener("click", function () {
     ["Tisza", "Duna", "Száva", "Moson"],
     ["Petőfi", "Arany", "Kosztolányi", "Ady"],
     ["Kispest", "Fradi", "Újpest", "Nyíregyháza"],
+    [
+      "II. Szilveszter pápa",
+      "X. Benedek pápa",
+      "VI. János pápa",
+      "I. Kelemen pápa",
+    ],
+    ["Batthyány Lajos", "Kossuth Lajos", "Deák Ferenc", "Széchenyi István"],
+    ["Hunyadi János", "Dugonics Titusz", "Anonymus", "II. Mehmed"],
+    [
+      "közlekedésügyi miniszter",
+      "népjóléti miniszter",
+      "pénzügyminiszter",
+      "belügyminiszter",
+    ],
+    ["417 km", "324 km", "528 km", "483 km"],
   ];
 
   if (kérdések.length > 0) {
@@ -204,17 +329,9 @@ document.querySelector("#btn-újra").addEventListener("click", function () {
     document.querySelector(".újra").classList.remove("hidden");
   }
 
-  document.querySelector(".válasz1").style.backgroundColor =
-    "rgba(42, 97, 168, 0.9)";
-  document.querySelector(".válasz2").style.backgroundColor =
-    "rgba(42, 97, 168, 0.9)";
-  document.querySelector(".válasz3").style.backgroundColor =
-    "rgba(42, 97, 168, 0.9)";
-  document.querySelector(".válasz4").style.backgroundColor =
-    "rgba(42, 97, 168, 0.9)";
   document.querySelector(".kérdés").textContent = kérdés;
-  document.querySelector(".válasz1").textContent = válasz1;
-  document.querySelector(".válasz2").textContent = válasz2;
-  document.querySelector(".válasz3").textContent = válasz3;
-  document.querySelector(".válasz4").textContent = válasz4;
+  document.querySelector(".válasz1label").textContent = válasz1;
+  document.querySelector(".válasz2label").textContent = válasz2;
+  document.querySelector(".válasz3label").textContent = válasz3;
+  document.querySelector(".válasz4label").textContent = válasz4;
 });
