@@ -258,10 +258,10 @@ document.querySelector("#btn-következő").addEventListener("click", function ()
   document.querySelector(".válasz2label").textContent = válasz2;
   document.querySelector(".válasz3label").textContent = válasz3;
   document.querySelector(".válasz4label").textContent = válasz4;
-  document.querySelector(".válasz1label").style.color = "black";
-  document.querySelector(".válasz2label").style.color = "black";
-  document.querySelector(".válasz3label").style.color = "black";
-  document.querySelector(".válasz4label").style.color = "black";
+  document.querySelector(".válasz1label").style.color = "white";
+  document.querySelector(".válasz2label").style.color = "white";
+  document.querySelector(".válasz3label").style.color = "white";
+  document.querySelector(".válasz4label").style.color = "white";
   document.querySelector("#válasz1").checked = false;
   document.querySelector("#válasz2").checked = false;
   document.querySelector("#válasz3").checked = false;

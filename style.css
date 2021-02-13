@@ -1,15 +1,21 @@
 body {
   padding-left: 2rem;
   /* background-image: url(háttér.jpg); */
-  background-color: rgba(153, 153, 160, 0.9);
+  background-color: rgba(34, 34, 34, 0.9);
 }
 
 p {
-  font-size: 20px;
+  font-size: 25px;
+  color: rgba(97, 172, 44, 0.9);
+}
+
+h1 {
+  color: red;
 }
 
 .kérdésszöveg {
-  font-size: 20px;
+  font-size: 25px;
+  color: white;
 }
 
 /* .válaszok {
@@ -17,17 +23,17 @@ p {
 } */
 
 .válaszlabelök {
-  font-size: 20px;
+  font-size: 30px;
+  color: white;
 }
 
 .válaszcont {
-  padding-bottom: 7px;
+  padding-bottom: 15px;
 }
 
 input {
-  padding-bottom: 40px;
-  height: 16px;
-  width: 16px;
+  height: 20px;
+  width: 20px;
 }
 
 .btn {
