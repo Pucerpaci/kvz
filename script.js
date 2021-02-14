@@ -1,4 +1,5 @@
 "use strict";
+let szint;
 
 let kérdés;
 let véletlenk;
@@ -118,11 +119,35 @@ const újkérdés = function () {
 
 // WEBTARTALOM FELÜLÍRÁSA:
 
-document.querySelector("#btn-kezdés").addEventListener("click", function () {
+document.querySelector(".kezdő").addEventListener("click", function () {
+  szint = 1;
+  document.querySelector(".kezdleír").classList.remove("hidden");
+  document.querySelector(".btn-kezdés").classList.remove("hidden");
+  document.querySelector(".kezdő").classList.add("hidden");
+  document.querySelector(".haladó").classList.add("hidden");
+  document.querySelector(".kezdhalad").textContent =
+    "Magyarország kvíz - kezdő szint";
+});
+
+document.querySelector(".haladó").addEventListener("click", function () {
+  szint = 2;
+  document.querySelector(".haladleír").classList.remove("hidden");
+  document.querySelector(".btn-kezdés").classList.remove("hidden");
+  document.querySelector(".kezdő").classList.add("hidden");
+  document.querySelector(".haladó").classList.add("hidden");
+  document.querySelector(".kezdhalad").textContent =
+    "Magyarország kvíz - haladó szint";
+});
+
+document.querySelector(".btn-kezdés").addEventListener("click", function () {
   újkérdés();
+  document.querySelector("#btn-következő").classList.remove("hidden");
+  document.querySelector(".kezdleír").classList.add("hidden");
+  document.querySelector(".haladleír").classList.add("hidden");
   document.querySelector(".kérdés").classList.remove("hidden");
   document.querySelector(".válaszok").classList.remove("hidden");
-  document.querySelector("#btn-kezdés").classList.add("hidden");
+  document.querySelector(".btn-kezdés").classList.add("hidden");
+  document.querySelector(".kezdőkép").classList.add("hidden");
   document.querySelector(".következő").classList.remove("hidden");
   document.querySelector(".kérdés").textContent = kérdés;
   document.querySelector(".kérdés").classList.add("kérdésszöveg");
@@ -140,8 +165,16 @@ document.querySelector("#válasz1").addEventListener("click", function () {
     document.querySelector(
       ".jóválaszaránya"
     ).textContent = `${pontok}/${kérdésszámok}`;
+    if (pontok === 10) {
+      document.querySelector("#btn-következő").classList.add("hidden");
+      document.querySelector(".kérdés").classList.add("hidden");
+      document.querySelector(".válaszok").classList.add("hidden");
+      document.querySelector(".végepont").classList.remove("hidden");
+      document.querySelector(".újra").classList.remove("hidden");
+    }
   } else {
     document.querySelector(".válasz1label").style.color = "red";
+    if (pontok > 0 && szint === 2) pontok = pontok - 1;
     document.querySelector(
       ".jóválaszaránya"
     ).textContent = `${pontok}/${kérdésszámok}`;
@@ -153,6 +186,8 @@ document.querySelector("#válasz1").addEventListener("click", function () {
     if (válasz4 === helyesválasz)
       document.querySelector(".válasz4label").style.color = "green";
   }
+  document.querySelector("#válasz1").checked = true;
+  document.querySelector("#válasz1").disabled = true;
   document.querySelector("#válasz2").disabled = true;
   document.querySelector("#válasz3").disabled = true;
   document.querySelector("#válasz4").disabled = true;
@@ -166,9 +201,16 @@ document.querySelector("#válasz2").addEventListener("click", function () {
     document.querySelector(
       ".jóválaszaránya"
     ).textContent = `${pontok}/${kérdésszámok}`;
-    jóválaszarány = (pontok / kérdésszámok) * 100;
+    if (pontok === 10) {
+      document.querySelector("#btn-következő").classList.add("hidden");
+      document.querySelector(".kérdés").classList.add("hidden");
+      document.querySelector(".válaszok").classList.add("hidden");
+      document.querySelector(".végepont").classList.remove("hidden");
+      document.querySelector(".újra").classList.remove("hidden");
+    }
   } else {
     document.querySelector(".válasz2label").style.color = "red";
+    if (pontok > 0 && szint === 2) pontok = pontok - 1;
     document.querySelector(
       ".jóválaszaránya"
     ).textContent = `${pontok}/${kérdésszámok}`;
@@ -181,6 +223,8 @@ document.querySelector("#válasz2").addEventListener("click", function () {
     if (válasz4 === helyesválasz)
       document.querySelector(".válasz4label").style.color = "green";
   }
+  document.querySelector("#válasz2").checked = true;
+  document.querySelector("#válasz2").disabled = true;
   document.querySelector("#válasz1").disabled = true;
   document.querySelector("#válasz3").disabled = true;
   document.querySelector("#válasz4").disabled = true;
@@ -194,9 +238,16 @@ document.querySelector("#válasz3").addEventListener("click", function () {
     document.querySelector(
       ".jóválaszaránya"
     ).textContent = `${pontok}/${kérdésszámok}`;
-    jóválaszarány = (pontok / kérdésszámok) * 100;
+    if (pontok === 10) {
+      document.querySelector("#btn-következő").classList.add("hidden");
+      document.querySelector(".kérdés").classList.add("hidden");
+      document.querySelector(".válaszok").classList.add("hidden");
+      document.querySelector(".végepont").classList.remove("hidden");
+      document.querySelector(".újra").classList.remove("hidden");
+    }
   } else {
     document.querySelector(".válasz3label").style.color = "red";
+    if (pontok > 0 && szint === 2) pontok = pontok - 1;
     document.querySelector(
       ".jóválaszaránya"
     ).textContent = `${pontok}/${kérdésszámok}`;
@@ -209,6 +260,8 @@ document.querySelector("#válasz3").addEventListener("click", function () {
     if (válasz4 === helyesválasz)
       document.querySelector(".válasz4label").style.color = "green";
   }
+  document.querySelector("#válasz3").checked = true;
+  document.querySelector("#válasz3").disabled = true;
   document.querySelector("#válasz1").disabled = true;
   document.querySelector("#válasz2").disabled = true;
   document.querySelector("#válasz4").disabled = true;
@@ -222,9 +275,16 @@ document.querySelector("#válasz4").addEventListener("click", function () {
     document.querySelector(
       ".jóválaszaránya"
     ).textContent = `${pontok}/${kérdésszámok}`;
-    jóválaszarány = (pontok / kérdésszámok) * 100;
+    if (pontok === 10) {
+      document.querySelector("#btn-következő").classList.add("hidden");
+      document.querySelector(".kérdés").classList.add("hidden");
+      document.querySelector(".válaszok").classList.add("hidden");
+      document.querySelector(".végepont").classList.remove("hidden");
+      document.querySelector(".újra").classList.remove("hidden");
+    }
   } else {
     document.querySelector(".válasz4label").style.color = "red";
+    if (pontok > 0 && szint === 2) pontok = pontok - 1;
     document.querySelector(
       ".jóválaszaránya"
     ).textContent = `${pontok}/${kérdésszámok}`;
@@ -237,6 +297,8 @@ document.querySelector("#válasz4").addEventListener("click", function () {
     if (válasz3 === helyesválasz)
       document.querySelector(".válasz3label").style.color = "green";
   }
+  document.querySelector("#válasz4").checked = true;
+  document.querySelector("#válasz4").disabled = true;
   document.querySelector("#válasz1").disabled = true;
   document.querySelector("#válasz2").disabled = true;
   document.querySelector("#válasz3").disabled = true;
@@ -249,6 +311,8 @@ document.querySelector("#btn-következő").addEventListener("click", function ()
     újkérdés();
   } else {
     document.querySelector("#btn-következő").classList.add("hidden");
+    document.querySelector(".kérdés").classList.add("hidden");
+    document.querySelector(".válaszok").classList.add("hidden");
     document.querySelector(".vége").classList.remove("hidden");
     document.querySelector(".újra").classList.remove("hidden");
   }
@@ -276,11 +340,17 @@ document.querySelector("#btn-újra").addEventListener("click", function () {
   kérdésszámok = 1;
   pontok = 0;
 
-  document.querySelector(
-    ".jóválaszaránya"
-  ).textContent = `${pontok}/${kérdésszámok}`;
+  document.querySelector(".jóválaszaránya").textContent = `0/0`;
+  document.querySelector(".kezdhalad").textContent = "Magyarország kvíz";
 
-  document.querySelector("#btn-következő").classList.remove("hidden");
+  document.querySelector(".kezdő").classList.remove("hidden");
+  document.querySelector(".haladó").classList.remove("hidden");
+  document.querySelector(".következő").classList.add("hidden");
+
+  // document.querySelector("#btn-következő").classList.remove("hidden");
+  // document.querySelector(".kérdés").classList.remove("hidden");
+  // document.querySelector(".válaszok").classList.remove("hidden");
+  document.querySelector(".végepont").classList.add("hidden");
   document.querySelector(".vége").classList.add("hidden");
   document.querySelector(".újra").classList.add("hidden");
 
@@ -331,17 +401,72 @@ document.querySelector("#btn-újra").addEventListener("click", function () {
     ["417 km", "324 km", "528 km", "483 km"],
   ];
 
-  if (kérdések.length > 0) {
-    újkérdés();
-  } else {
-    document.querySelector("#btn-következő").classList.add("hidden");
-    document.querySelector(".vége").classList.remove("hidden");
-    document.querySelector(".újra").classList.remove("hidden");
-  }
+  console.log(kérdések);
+
+  // if (kérdések.length > 0) {
+  //   újkérdés();
+  // } else {
+  document.querySelector("#btn-következő").classList.add("hidden");
+
+  // }
 
   document.querySelector(".kérdés").textContent = kérdés;
   document.querySelector(".válasz1label").textContent = válasz1;
   document.querySelector(".válasz2label").textContent = válasz2;
   document.querySelector(".válasz3label").textContent = válasz3;
   document.querySelector(".válasz4label").textContent = válasz4;
+  document.querySelector(".válasz1label").style.color = "white";
+  document.querySelector(".válasz2label").style.color = "white";
+  document.querySelector(".válasz3label").style.color = "white";
+  document.querySelector(".válasz4label").style.color = "white";
+  document.querySelector("#válasz1").checked = false;
+  document.querySelector("#válasz2").checked = false;
+  document.querySelector("#válasz3").checked = false;
+  document.querySelector("#válasz4").checked = false;
+  document.querySelector("#válasz1").disabled = false;
+  document.querySelector("#válasz2").disabled = false;
+  document.querySelector("#válasz3").disabled = false;
+  document.querySelector("#válasz4").disabled = false;
+});
+
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const btnCloseModal = document.querySelector(".close-modal");
+
+const btnsOpenModal = document.querySelectorAll(".show-modal"); // Ha egy class több buttonhoz tartozik, akkot a sima qeurySelector parancs csak az első classt választja ki! Ezért kell az All a végére!!!!
+
+// Funciotn-t írunk rá, hogy mit csináljon, ha meg akarjuk nyitni klikkeléssel az ablakot!
+
+const openModal = function () {
+  modal.classList.remove("hidden"); //ITT NEM KELL A hidden ELÉ PONT!!!!!!
+  overlay.classList.remove("hidden");
+};
+
+// Funciotn-t írunk rá, hogy mit csináljon, ha be akarjuk zárni klikkeléssel az ablakot!
+
+const closeModal = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+// Itt hívjuk meg a fent létrehozott függvényeket a klikk után az eventlistenerbe ágyazva. ITT NEM KELL UTÁNA ZÁRÓJEL, HISZEN AKKOR MAGÁTÓL LEFUTNA, DE MI AZT AKARJUK, HOGY CSAK AKKOR FUSSON LE, HA KLIKKELÜNK ELŐTTE!!!!!
+
+for (let i = 0; i < btnsOpenModal.length; i++)
+  btnsOpenModal[i].addEventListener("click", openModal);
+
+btnCloseModal.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+// ESC billentyű megnyomásával így tudjuk bezárni az ablakot:
+
+// A keydown parancs azt jelenti, hogy lenyomunk egy gombot (bármilyen gombot!). Van még keypress (nyomva tartunk egy gombot) és keyup (felengedük egy gombot) parancs is!!!
+
+// Az IF-el adjuk meg, hogy milyen gomb megnyomására történjen az esemény (itt más feltétel is tartozik hozzá, konkrétan az, hogy ne legyen elrejtve az ablak, vagyis éppen legyen megjelenítve!)
+
+// A function után zárójelbe mindenképpen kell legyen valami, mert itt definiáljuk, hogy tudni akarjuk a lenyomott billyentyűt!!! Itt "e" nevet kapott, de lehetett volna más is.
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
 });

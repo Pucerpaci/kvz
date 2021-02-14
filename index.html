@@ -8,12 +8,30 @@
     <title>Magyarország kvíz</title>
   </head>
   <body>
+    <button class="show-modal">Játékleírás</button>
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>Játékleírás</h1>
+      <p class="modalleír">
+        A játék akkor ér véget, ha eléred a 10 pontot. A kezdő szint esetében minden jó válasz 1 pontot ér, a rossz válaszok esetében nem történik pontlevonás. A haladó szint esetében minden jó válasz 1 pontot ér, azonban rossz válasz esetén büntetésként 1 pontot levonunk! 
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
     <div>
-      <h1>
+      <h1 class="kezdhalad">
         Magyarország kvíz
       </h1>
-      <button id="btn-kezdés">Játék kezdése</button>
+      <button class="kezdő">Kezdő szint</button>
+    <button class="haladó">Haladó szint</button>
+    <p class="kezdleír hidden">A játék akkor ér véget, ha eléred a 10 pontot. A kezdő szint esetében minden jó válasz 1 pontot ér, a rossz válaszok esetében nem történik pontlevonás.</p>
+    <p class="haladleír hidden">A játék akkor ér véget, ha eléred a 10 pontot. A haladó szint esetében minden jó válasz 1 pontot ér, azonban rossz válasz esetén büntetésként 1 pontot levonunk!</p>
+        <button class="btn-kezdés hidden">Játék kezdése</button>
     </div>
+
+<div class="kezdőkép">
+  <img src="háttér.jpg" alt="">
+</div>
+
     <div class="kérdés hidden">
       <h2 class="kérdésszöveg">Kérdés</h2>
     </div>
@@ -46,48 +64,11 @@
       <span class="checkmark"></span>
 </div>
 
-      <!-- <input id="válasz1" type="checkbox" />
-      <label class="válasz1label válaszlabelök">válasz1</label>
-      <span class="checkmark"></span>
-      <br />
-      <input id="válasz2" type="checkbox" />
-      <label class="válasz2label válaszlabelök">válasz2</label>
-      <span class="checkmark"></span>
-      <br />
-      <input id="válasz3" type="checkbox" />
-      <label class="válasz3label válaszlabelök">válasz3</label>
-      <span class="checkmark"></span>
-      <br />
-      <input id="válasz4" type="checkbox" />
-      <label class="válasz4label válaszlabelök">válasz4</label>
-      <span class="checkmark"></span> -->
-      <!-- <input id="válasz1" type="radio" name="válaszok" value="1" />
-      <label class="válasz1label válaszlabelök">válasz1</label>
-      <br />
-      <input id="válasz2" type="radio" name="válaszok" value="2" /><label
-        class="válasz2label válaszlabelök"
-        >válasz2</label
-      >
-      <br />
-      <input id="válasz3" type="radio" name="válaszok" value="3" /><label
-        class="válasz3label válaszlabelök"
-        >válasz3</label
-      >
-      <br />
-      <input id="válasz4" type="radio" name="válaszok" value="4" /><label
-        class="válasz4label válaszlabelök"
-        >válasz4</label
-      > -->
-      <!-- <button class="btn válasz1">Válasz1</button>
-      <button class="btn válasz2">Válasz2</button>
-      <br />
-      <br />
-      <button class="btn válasz3">Válasz3</button>
-      <button class="btn válasz4">Válasz4</button> -->
     </div>
     <div class="következő hidden">
       <p>Jó válaszok aránya: <p class="jóválaszaránya">0/0</p> </p>
       <button id="btn-következő">Következő</button>
+      <h1 class="végepont hidden">Elérted a 10 pontot, vége a játéknak!</h1>
       <h1 class="vége hidden">Nincs több kérdés, vége a játéknak!</h1>
     </div>
     <div class="újra hidden">
