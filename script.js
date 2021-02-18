@@ -53,7 +53,7 @@ document.querySelector(".haladó").addEventListener("click", function () {
 const reqkérdések = new XMLHttpRequest();
 
 reqkérdések.open("GET", "/Kerdesek.txt");
-reqkérdések.send();
+
 
 reqkérdések.addEventListener("load", function () {
   console.log(reqkérdések.responseText);
