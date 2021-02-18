@@ -52,7 +52,7 @@ document.querySelector(".haladó").addEventListener("click", function () {
 
 const reqkérdések = new XMLHttpRequest();
 
-reqkérdések.open("GET", "/Kerdesek.txt");
+reqkérdések.open("GET", "https://github.com/Pucerpaci/kvz/blob/main/Kerdesek.txt");
 reqkérdések.send();
 
 reqkérdések.addEventListener("load", function () {
