@@ -31,3 +31,20 @@ Ki volt a Lánchíd építésének vezetője?;Clark Ádám;Széchenyi István;Wi
 Kinek a sírján olvasható: "Csak a teste!"?;Gárdonyi Géza;Kossuth Lajos;II. Rákóczi Ferenc;Tisza István
 Melyik bankjegyünkön szerepel a "legnagyobb magyar"?;5000;10000;20000;2000
 Hány énekből áll a Toldi?;12;10;6;8
+Mikor volt a tatárjárás?;1241-42;1256-57;1301-1302;1222-23
+Melyik megye székhelye Szekszárd?;Tolna;Baranya;Fejér;Somogy
+A népballada szerint melyik várba falazták be Kőmíves Kelemennét?;Déva;Buda;Léta;Vajdahunyad
+Ki volt I. Szent István király felesége?;Gizella királyné;Beatrix királyné;Zita királyné;Gertrúd királyné
+Ki volt Mátyás király első felesége?;Podjebrád Katalin;Cillei Erzsébet;Szilágyi Erzsébet;Aragóniai Beatrix
+Melyik az a 3 részes magyar film, melynek egyik szereplője és rendezője is Rudolf Péter?;Üvegtigris;Valami Amerika;Argó;Kalandorok
+Melyik évben szólalt fel Parlamentünkben az angol királynő, II. Erzsébet?;1993;1990;1988;1995
+Melyik városunk a hagyma városa?;Makó;Szeged;Hódmezővásárhely;Gyula
+Hogy hívták a pápát, aki 1991-ben Magyarországra látogatott?;II. János Pál;I. János Pál;I. Ferenc;XVI. Benedek
+Kivel rendezett volna közös futball Európa bajnokságot Magyarország 2012-ben?;Horvátország;Ausztria;Szlovákia;Románia
+Melyik város volt az Anjou-királyok uralkodási helye?;Visegrád;Veszprém;Buda;Székesfehérvár
+Magyarországon gyakran látható állat az ökörszem. Hány lába van?;2;nincs lába;4;8
+Mikor alakult az első független magyar kormány?;1848;1849;1844;1867
+Mikortól hivatalos nyelv a magyar Magyarországon?;1844;1848;1867;1920
+Melyik évben alapították a Magyar Tudományos Akadémiát?;1825;1833;1844;1867
+Melyik hazánk legnagyobb nemzeti parkja?;Hortobágyi Nemzeti Park;Kunsági Nemzeti Park;Körös-Maros Nemzeti Park;Bükki Nemzeti Park
+Hányadik magyar köztársaságot kiáltották ki az 1989-es rendszerváltáskor?;3.;1.;2.;4.
