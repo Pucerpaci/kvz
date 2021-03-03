@@ -1,0 +1,36 @@
+A Duna teljes hossza 2850 km, mennyi ebből a magyarországi szakasz?;417 km;324 km;528 km;483 km
+Melyik tájegységen található a Badacsony?;Balaton-felvidék;Rétköz;Őrség;Szigetköz
+Hol található Magyarország legmélyebb tava?;Rudabánya;Tata;Tarcal;Mád
+Melyik város NEM a Duna partján fekszik?;Mosonmagyaróvár;Komárom;Paks;Mohács
+Mely hegység lábánál fekszik Miskolc?;Bükk;Zemplén;Mátra;Cserhát
+Melyik megyénk NEM érinti a Balatont?;Vas;Veszprém;Zala;Fejér
+Ha Greenwichben délután 3 óra van, hány óra van Budapesten?;4;3;2;5
+Melyik megye székhelye Szekszárd?;Tolna;Baranya;Fejér;Somogy
+Melyik országban található Zólyom, Balassi Bálint szülőhelye?;Szlovákia;Ukrajna;Szerbia;Románia
+Mi Abádszalók tava?;Tisza-tó;Fertő-tó;Velencei-tó;Balaton
+Mi Komárom folyója?;Duna;Tisza;Rába;Ipoly
+Hazánk melyik része tartozott Pannóniához?;Dunántúl;Duna-Tisza köze;Tiszántúl;Alföld
+Mi az Őrség "fővárosa"?;Őriszentpéter;Szentgotthárd;Körmend;Csákánydoroszló
+Melyik egy magyar-szerb határátkelőhely?;Röszke;Letenye;Záhony;Barcs
+Melyik síparadicsomunk van Miskolchoz közel, a Bükk hegységben?;Bánkút;Eplény;Sátoraljaújhely;Mátraszentistván
+Melyek Szeged folyói?;Tisza és Maros;Tisza és Körös;Tisza és Zagyva;Körös és Maros
+Hogy hívják az Öreg- és a Mosoni-Duna közötti területet?;Szigetköz;Margit-sziget;Mohácsi-sziget;Csepel-sziget
+Melyik országban található Körmöcbánya, hazánk egykori legfontosabb aranybányája és pénzverdéje?;Szlovákia;Ausztria;Románia;Horvátország
+Hogy hívják Miskolc várát?;Diósgyőri vár;Regéci vár;Füzéri vár;Boldogkői vár
+Hol épült Magyarország egyetlen atomerőműve?;Paks;Budapest;Szomathely;Tiszaújváros
+Mi Somogy megye székhelye?;Kaposvár;Szigetvár;Nagykanizsa;Dombóvár
+Hol található Lehel kürtje?;Jászberény;Szolnok;Jászapáti;Debrecen
+Mi a neve a lillafüredi tónak?;Hámori-tó;Tisza-tó;Békás-tó;Szelidi-tó
+Mi volt a Margit-sziget legismertebb középkori neve?;Nyulak szigete;Békák szigete;Hősök szigete;Bolhák szigete
+Melyik a Zagyva legjelentősebb baloldali mellékvize?;Tarna;Galga;Tápió;Bódva
+Mit hívtak latinul Transsilvanianak(Transylvania)?;Erdélyt;Felvidéket;Kárpátalját;Vajdaságot
+Hány nemzeti parkunk van?;10;9;8;7
+Hol van a budapesti metró három vonalának átszállóhelye?;Deák téren;Blaha Lujza téren;Kálvin téren;Oktogon
+Melyik hídra néz le Szent Gellért szobra?;Erzsébet híd;Lánchíd;Szabadság híd;Petőfi híd
+Melyik országban ered a Tisza?;Ukrajna;Románia;Szlovákia;Oroszország
+Melyik folyónk táplálja a Kis-Balatont?;Zala;Rába;Sió;Marcal
+Budapest melyik kerületében állt a római kori Aquincum?; I. kerület;II. kerület;III. kerület;IV. kerület
+Melyik megyénk része a Göcsej?;Zala megye;Vas megye;Somogy megye;Tolna megye
+Melyik folyó NEM magyar-szlovák határfolyó?;Szamos;Ipoly;Duna;Tisza
+Melyik településen NEM található magyar-osztrák határátkelő?;Rajka;Kőszeg;Kópháza;Sopron;
+Melyik hazánk legnagyobb nemzeti parkja?;Hortobágyi Nemzeti Park;Kunsági Nemzeti Park;Körös-Maros Nemzeti Park;Bükki Nemzeti Park

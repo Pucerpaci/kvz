@@ -23,7 +23,7 @@ let kérdéskülön;
 
 const reqkérdések = new XMLHttpRequest();
 
-reqkérdések.open("GET", "/Kerdesek.txt");
+reqkérdések.open("GET", "/tortenelem.txt");
 reqkérdések.send();
 
 // document.querySelector(".töri").addEventListener("click", function () {
@@ -362,7 +362,8 @@ document.querySelector("#btn-újra").addEventListener("click", function () {
   élet = 10;
 
   document.querySelector(".jóválaszaránya").textContent = `10 / 0`;
-  document.querySelector(".téma").textContent = "Magyarország kvíz - Vegyes";
+  document.querySelector(".téma").textContent =
+    "Magyarország kvíz - Történelem";
 
   document.querySelector(".btn-kezdés").classList.remove("hidden");
   document.querySelector(".következő").classList.add("hidden");
